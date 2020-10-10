@@ -10,7 +10,10 @@ html {
 tr{
     color:white;
 }
-
+.floatRight{
+    float:right;
+    margin-left:20px
+}
 img {
     width: 100%;
     height: auto;
@@ -110,6 +113,13 @@ body {
     background-color: white;
 }
 
+#map,
+body,
+html {
+  height: 100%;
+}
+
+
 th {
     color: rgb(104, 10, 141);
     position: sticky;
@@ -166,5 +176,7 @@ th {
     background: rgb(245, 242, 242);
     }
 }
+
+ 
 
  
