@@ -14,14 +14,14 @@
   <!--Bootstrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!--beautify-marker css-->
-  <link rel="stylesheet" type="text/css" href="css/leaflet-beautify-marker-icon.css">
+  <link rel="stylesheet" type="text/css" href="static/css/leaflet-beautify-marker-icon.css">
   <!--Our CSS-->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
   
       <div class="logo-image">
-          <img src="LOGO.png" class="img-fluid">
+          <img src="static/images/logo.jpeg" alt="Logo" class="img-fluid">
       </div>
    
     
@@ -41,13 +41,15 @@
         <div class="col-md-2">
           <div class="well">
             <h5>Type of Investor:</h5>
-            <select id="selDataset" onchange="optionChanged(this.value)">
+            <select id="selDataset" onchange="optionChanged(this.type)">
               <option value="angel">Angel</option>
               <option value="strategic">Strategic</option>
               <option value="vc">Venture Capital</option>
               <option value="pe">Private Equity</option>
               <option value="other">Other</option>
             </select>
+
+
 
           </div>
         </div>
@@ -90,28 +92,28 @@
         </div>
       </div> 
         <div id="map"></div>
+   
     </div>
   
   </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<!--JQuery-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!-- d3 JS -->
-<script src="https://d3js.org/d3.v4.min.js"></script> 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-crossorigin=""></script>
-<!--beautify-marker js-->
-<script type="text/javascript" src="static/js/leaflet-beautify-marker-icon.js"></script>
-<!-- Our JS -->
-<script type="text/javascript" src="static/js/config.js"></script>
-<script type="text/javascript" src="./static/js/logic.js"></script>
-<script src="./static/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- d3 JS -->
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <!--beautify-marker js-->
+  <script type="text/javascript" src="static/js/leaflet-beautify-marker-icon.js"></script>
+  <!-- Our JS -->
+  <script type="text/javascript" src="static/js/config.js"></script>
+  <script type="text/javascript" src="static/js/logic.js"></script>
+  <script src="static/js/app.js"></script>
    
 
 </body>
