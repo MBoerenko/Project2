@@ -12,13 +12,13 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   maxZoom: 18,
   zoomOffset: -1,
   id: "mapbox/light-v10",
-  accessToken: API_KEY
+  accessToken: "pk.eyJ1IjoiYXJ1bmthcmEiLCJhIjoiY2tmZWppeTM5MDVpazJzbm5saTd5dGR0eiJ9.iLOl6ZYIpPJDOtwDQTk5tg"
 }).addTo(myMap);
 
-var investorsData = "/investors2"
+var investorsData = "static/js/investors2.csv"
 //Grab the data with d3
-investorsData, function (data) {
-  console.log(data);
+d3.csv(investorsData, function (data) {
+console.log(data);
 
 
   var investorMarkers = []
@@ -46,8 +46,6 @@ investorsData, function (data) {
         }).bindPopup("<h2>" + data[i].name + "</h2> <hr> <h4> Investor Type: " + data[i].type + "<br> " + data[i].website + "</h4>")
       );
     }
-    console.log(investorMarkers)
-
   }
   let investorLayer = L.layerGroup(investorMarkers)
   investorLayer.addTo(myMap);
@@ -56,4 +54,4 @@ investorsData, function (data) {
   if (container != null) {
     container._leaflet_id = null;
   }
-};
+});
