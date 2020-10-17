@@ -12,7 +12,7 @@ from sqlalchemy import create_engine, func
 from flask import Flask, jsonify
 from flask_sqlalchemy import sqlalchemy
 import json
-import folium
+import leaflet
 
 app = Flask(__name__)
 
@@ -23,7 +23,7 @@ con=engine.connect()
 def index():
     return render_template("index.html")
 
-@app.route('/maps')
+@app.route('/maps.html')
 def map_func():
 	return render_template('maps.html')
 
@@ -99,6 +99,12 @@ def The_Worlds_Billionaires():
     response4 = pd.read_sql("SELECT * FROM investors_copy", con=engine)
     response4_dict = response4.to_dict(orient = "records")
     return jsonify(response4_dict)
+
+@app.route("/investorscopy2")
+def investorscopy2():
+    investorscopy2 = pd.read_sql("SELECT * FROM investors_copy", con=engine)
+    investorscopy_dict2 = investorscopy2.to_dict(orient = "records")
+    return jsonify(investorscopy_dict2)
 
 if __name__ == "__main__":
     app.run()

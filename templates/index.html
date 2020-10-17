@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>MAAR Investments for HotMessBrewery</title>
@@ -20,12 +19,9 @@
   <link rel="shortcut icon" href="#" />
 </head>
 <body>
-  
       <div class="logo-image">
           <img src="static/images/logo.jpeg" alt="Logo" class="img-fluid">
       </div>
-   
-    
 <!-- create html code for each page -->
       <div class="container">
           <div class="row">
@@ -33,7 +29,6 @@
                   <div class="container"> 
                     <h1 class="display-1">M.A.A.R. Investments</h1>
                     <p class = "lead">Connecting Good Ideas with Better Resources </p>
-                    <!--<p>Interested in finding out more? <a href = "https://docs.google.com/document/d/1V7Kf7-1u6TJPfo648_SkEEHysBjPnVortiEhuf8AtiM/edit?usp=sharing">Click Here :)</p>-->
                   </div>
                 </div>
           </div>   
@@ -42,23 +37,14 @@
         <div class="col-md-2">
           <div class="well">
             <h5>Type of Investor:</h5>
-            <select id="selDataset" onchange="optionChanged(this.type)">
+            <select id="selDataset" onchange="getData(this.value)">
               <option value="angel">Angel</option>
               <option value="strategic">Strategic</option>
               <option value="vc">Venture Capital</option>
               <option value="pe">Private Equity</option>
               <option value="other">Other</option>
             </select>
-
-
-
           </div>
-        </div>
-        <!--<div class="col-md-4"> -->
-          <!--<div id="multi-bar"></div> -->
-        <!--</div>-->
-        <div class="col-md-10"> 
-          <!-- <div id="map"></div> -->
         </div>
       </div>
       <hr>
@@ -69,7 +55,6 @@
           </div>
         </div>
         <div class="col-md-4">
-          
           <div class="box">
             <h3>List of Investors</h3>
               <div id="table-area-responsive"></div>
@@ -92,10 +77,13 @@
           </div>
         </div>
       </div> 
-        <div id="map"></div>
-   
+      <hr>
+      <div class = "row">
+        <div class="col-md-12"> 
+          <h1 class = "lead"><a href = "maps.html">VIEW MAP </h1>
+        </div>
+      </div>
     </div>
-  
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -112,10 +100,6 @@
   <!--beautify-marker js-->
   <script type="text/javascript" src="static/js/leaflet-beautify-marker-icon.js"></script>
   <!-- Our JS -->
-  <script type="text/javascript" src="static/js/config.js"></script>
-  <script type="text/javascript" src="static/js/logic.js"></script>
   <script src="static/js/app.js"></script>
-   
-
 </body>
 </html>

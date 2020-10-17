@@ -1,22 +1,14 @@
 //build Plot
-console.log("buildPlot");
 function buildPlot(data) {
     //read in data
-    d3.json(`/api1`).then((data) => {
+    d3.json("/investorscopy2").then((data) => {
         let investor = data.map(d => d.name);
-            //console.log(`Investors: ${investor}`);
-        let portfolioSize = data.map(d => d.portfolio_size)
-                //console.log(`Portfolio Size: ${portfolioSize}`);
+        let portfolioSize = data.map(d => d.portfolio_size);
         let industry = data.map(d => d.industry);
-            //console.log(`Industry: ${industry}`); 
         let investorType = data.map(d => d.type_of_investor);
-            console.log(`Type: ${investorType}`);
         let wealth = data.map(d => d.wealth_worth_in_billions);
         let numberDeals = data.map(d => d.number_of_deals);
-        //let topNumberDeals = numberDeals.slice(0,10).reverse();
-            //console.log(`# of Deals: ${numberDeals}`);
         let website = data.map(d => d.website);
-            //console.log(`Website: ${website}`);
            //Multi-Chart (bar and line)
         let trace1 = {
             x:investor,
@@ -83,7 +75,6 @@ function buildPlot(data) {
     Plotly.newPlot("bubble", bubbleData, layout2);     
 });
 };
-console.log("buildTable");
 function buildTable(data) {
     let tbody = d3.select("tbody");
     tbody.html("");
@@ -95,9 +86,8 @@ function buildTable(data) {
         row.append("td").text(element.website);
     });
 };
-console.log("GetData");
 function getData(data) {
-    d3.json(`/api1`).then((data) => {
+    d3.json("/investorscopy2").then((data) => {
         let types = d3.select("#selDataset").property("value");
         //let newBarData = [];
         //let t1 = [];
@@ -115,24 +105,20 @@ function getData(data) {
             //newBarData.push(t1, t2, t3);
             //let update1 = {'x': newBarData[0], 'y': newBarData[1,2]};
             buildTable(filteredData);
+            buildPlot(filteredData);
             //Plotly.restyle("multi-bar", update1, newBarData[0,1,2]);
             //updatePlotly(filteredData);
         //} };
-        console.log(filteredData);console.log(t1);
     });   
 };
-function optionChanged(filteredData) {
+//function optionChanged(filteredData) {
     //updatePlotly(filteredData);
-    buildTable(filteredData);
-    getData(filteredData);
-};
-let sel = d3.select("#selDataset");
-sel.on("change", optionChanged);
+    //buildTable(filteredData);
+    //getData(filteredData);
+//};
 function init() {
     let sel = d3.select("#selDataset").on('change', () => {
-   //let selType = data.filter(data => data.type === sel);
-        //console.log(selType);
-        d3.json(`/api1`).then((data) => {
+        d3.json("/investorscopy2").then((data) => {
             buildPlot(data);
             buildTable(data);
             getData(data);

@@ -1,4 +1,4 @@
-investor_id,name,location,type,most_recent_deal,number_of_deals,portfolio_size,city,state,country,website,industry,lat,lon
+,investor_id,name,location,type,most_recent_deal,number_of_deals,portfolio_size,city,state,country,website,industry,lat,lon
 1761,Ascent Venture Partners,Boston,vc,2018-04-12,0,0,Boston,MA,USA,ascentvp.com,food & beverages,42.3602534,-71.0582912
 116,Baseline Ventures,Bay Area,vc,2020-07-20,182,113,San Francisco,CA,USA,baselinev.com,food & beverages,37.7790262,-122.4199061
 1968,Discovery Capital,Vancouver,vc,2019-11-25,0,0,Vancouver,CAN-BC,CAN,discoverycapital.com,food & beverages,49.1566925,-122.7740237
