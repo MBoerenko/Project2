@@ -100,9 +100,9 @@ def The_Worlds_Billionaires():
     response4_dict = response4.to_dict(orient = "records")
     return jsonify(response4_dict)
 
-@app.route("/investorscopy2")
+@app.route("/investors_copy2")
 def investorscopy2():
-    investorscopy2 = pd.read_sql("SELECT * FROM investors_copy", con=engine)
+    investorscopy2 = pd.read_sql("SELECT * FROM investors_copy2", con=engine)
     investorscopy_dict2 = investorscopy2.to_dict(orient = "records")
     return jsonify(investorscopy_dict2)
 

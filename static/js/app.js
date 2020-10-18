@@ -1,7 +1,7 @@
 //build Plot
 function buildPlot(data) {
     //read in data
-    d3.json("/investorscopy2").then((data) => {
+    d3.json("/investors_copy2").then((data) => {
         let investor = data.map(d => d.name);
         let portfolioSize = data.map(d => d.portfolio_size);
         let industry = data.map(d => d.industry);
@@ -87,7 +87,7 @@ function buildTable(data) {
     });
 };
 function getData(data) {
-    d3.json("/investorscopy2").then((data) => {
+    d3.json("/investors_copy2").then((data) => {
         let types = d3.select("#selDataset").property("value");
         //let newBarData = [];
         //let t1 = [];
@@ -118,7 +118,7 @@ function getData(data) {
 //};
 function init() {
     let sel = d3.select("#selDataset").on('change', () => {
-        d3.json("/investorscopy2").then((data) => {
+        d3.json("/investors_copy2").then((data) => {
             buildPlot(data);
             buildTable(data);
             getData(data);
