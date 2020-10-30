@@ -24,16 +24,16 @@ img {
 }
 
 .logo{
-    width: 100px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     margin-top: 10px;
     margin-top: -140px;
 }
 
 .logo-image{
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
     margin-top: 10px;
     margin-left: 20px;

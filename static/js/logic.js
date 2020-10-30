@@ -15,7 +15,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: "pk.eyJ1IjoiYXJ1bmthcmEiLCJhIjoiY2tmZWppeTM5MDVpazJzbm5saTd5dGR0eiJ9.iLOl6ZYIpPJDOtwDQTk5tg"
 }).addTo(myMap);
 
-var investorsData = "static/js/investors2.csv"
+var investorsData = "/investors2"
 //Grab the data with d3
 d3.csv(investorsData, function (data) {
 console.log(data);
